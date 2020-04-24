@@ -4,6 +4,7 @@ export const User = Record(
     {
         firstName: null,
         lastName: null,
+        profilePic: null,
         profileResume: null,
         location: null,
         experienceResume: null,
@@ -14,6 +15,7 @@ export const User = Record(
         messagesCount: null,
         dailyViewsCount: null,
         searchAppearanceCount: null,
+        postsViewCount: null,
         visitors: new List()
     },
     'User'
@@ -54,6 +56,6 @@ export const toUser = user =>
             projects: new List(user.projects.map(project => new Project(project))) || null,
             skills: new List(user.skills.map(skill => new Skill(skill))) || null,
             educations: new List(user.educations.map(education => new Education(education))) || null,
-            visitors: new List(user.visitors.map(visitor => new User(visitor))) || null
+            visitors: new List(user.visitors.map(visitor => toUser(visitor)) || null
         })
     )
