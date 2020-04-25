@@ -4,12 +4,14 @@ import store from './store';
 import saga from './sagas/';
 
 import { sagaMiddleware } from './middleware';
+import { NavbarContainer } from './components/navigation/Navbar/NavbarContainer';
 
 import './App.scss';
 
+
 const App = () => (
   <Provider store={store}>
-    HELLO
+    <NavbarContainer />
   </Provider>
 );
 
