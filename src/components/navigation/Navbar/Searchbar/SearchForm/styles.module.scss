@@ -1,0 +1,21 @@
+.prependText{
+    border: none!important;
+    background: transparent!important;
+}
+
+input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none!important;
+    color: lightgrey!important;
+}
+
+@media (max-width: 768px - 1){
+    .input{
+        background: lightgray!important;
+    }
+
+    .prependText{
+        background: lightgray!important;
+    }
+}

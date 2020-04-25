@@ -2,8 +2,6 @@ import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
 import NavigationBar from './index'
-import { toggleUiNavbarAction } from '../../../actions/navigation/navbar/navbar';
-import { toggleUiSearchBarAction } from '../../../actions/navigation/navbar/searchbar';
 import { mainUser } from '../../../data/mockDatas/user';
 import { fetchUserActionRequest } from '../../../actions/user/user';
 
@@ -31,14 +29,6 @@ export const NavbarContainer = () => {
         fetchUser()
     }, [fetchUser])
 
-    const handleToggle = () => {
-        dispatch(toggleUiNavbarAction())
-    }
-
-    const handleSearchBarToggle = () => {
-        dispatch(toggleUiSearchBarAction())
-    }
-
-    return <NavigationBar messagesCount={messagesCount} toggle={handleToggle} toggleSearchBar={handleSearchBarToggle} />
+    return <NavigationBar messagesCount={messagesCount} />
 
 }

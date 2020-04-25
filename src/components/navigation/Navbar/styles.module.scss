@@ -3,7 +3,7 @@
     position: relative;
     z-index: 300;
     padding: 0;
-    height: 80px;
+    height: 70px;
   }
 
   .row.display-flex {
@@ -13,6 +13,9 @@
   .row.display-flex > [class*='col-'] {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
   }
   
   .togglerWrapper {
@@ -28,7 +31,12 @@
 
   .linkeDinLogoWrapper{
     display: flex;
-    justify-content: flex-end;
+  }
+
+  .responsiveSearchBar{
+    display: none;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .linkedin{
@@ -46,5 +54,27 @@
       display: none;
     }
   }
+
+  @media (max-width: 768px - 1){
+    .searchFormWrapper, .userBlockWrapper, .settingBarWrapper{
+      display: none;
+    }
+    .responsiveSearchBar{
+      display: block;
+    }
+  }
+
+  @media (min-width:1201px){
+    .linkeDinLogoWrapper{
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1201px) {
+    .linkeDinLogoWrapper {
+      justify-content: center!important;
+    }
+  }
+
   
   
