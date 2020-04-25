@@ -1,0 +1,55 @@
+.profilePic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px;
+    object-fit: cover;
+    object-position: center right;
+}
+
+
+.button {
+  color: black;
+  opacity: 0.9;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+
+  &:after {
+    margin-left: 11px;
+    font-size: 10px;
+    opacity: 60%;
+  }
+}
+
+.commandBlock {
+  text-align: left;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+
+  & > * {
+    font-weight: bold;
+  }
+
+  .message {
+    display: block;
+    font-size: 12px;
+    color: grey;
+    margin-top: 8px;
+  }
+}
+
+.statisticViewCount{
+    color: green;
+}
+
+.arrow{
+    transform: rotate(45deg)!important;
+}
+
+
