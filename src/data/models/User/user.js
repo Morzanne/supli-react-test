@@ -8,7 +8,7 @@ export const User = Record(
         profileResume: null,
         location: null,
         experienceResume: null,
-        projects: new List(),
+        projects: new List() || null,
         skills: new List(),
         educations: new List(),
         connectionCount: null,
@@ -49,13 +49,14 @@ export const Education = Record(
     'Education'
 )
 
-export const toUser = user =>
-    new User(
+export const toUser = user => {
+    return new User(
         fromJS({
             ...user,
-            projects: new List(user.projects.map(project => new Project(project))) || null,
-            skills: new List(user.skills.map(skill => new Skill(skill))) || null,
-            educations: new List(user.educations.map(education => new Education(education))) || null,
-            visitors: new List(user.visitors.map(visitor => toUser(visitor)) || null
+            projects: user.projects ? new List(user.projects.map(project => new Project(project))) : undefined,
+            skills: user.skills ? new List(user.skills.map(skill => new Skill(skill))) : null,
+            educations: user.educations ? new List(user.educations.map(education => new Education(education))) : null,
+            visitors: user.visitors ? new List(user.visitors.map(visitor => toUser(visitor))) : null,
         })
-    )
+    );
+}

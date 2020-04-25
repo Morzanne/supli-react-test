@@ -1,8 +1,9 @@
 import { Record } from 'immutable';
 
-const InitialState = Record(
+export const InitialState = Record(
     {
         data: null,
+        isFetchingDatas: false,
     },
 );
 

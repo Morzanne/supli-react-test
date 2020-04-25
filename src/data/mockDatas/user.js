@@ -1,7 +1,7 @@
 import { toUser } from "../models/User/user";
 import format from 'date-fns/format';
 
-export const mainUser = toUser([
+export const mainUser = toUser(
     {
         firstName: "Dmitry",
         lastName: 'Kargaev',
@@ -14,25 +14,25 @@ export const mainUser = toUser([
                 title: 'Zara redesign concept',
                 image: null,
                 description: 'UX/UI design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'YYYY-MM-DD'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             },
             {
                 title: 'SCTHON event brand identity',
                 image: null,
                 description: 'Graphic design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'YYYY-MM-DD'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             },
             {
                 title: 'Drozd, Brand identity 2016',
                 image: null,
                 description: 'Graphic Design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'YYYY-MM-DD'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             },
             {
                 title: 'Random',
                 image: null,
                 description: 'UX/UI design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'YYYY-MM-DD'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             }
         ],
         skills: [
@@ -53,12 +53,12 @@ export const mainUser = toUser([
             {
                 location: 'Moscow State Linguistic University',
                 degreeName: 'Bachelor degree Field Of StudyComputer and Information Systems',
-                practicalDate: format(new Date('December 17, 1995 03:24:00'), 'YYYY-MM-DD'),
+                practicalDate: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
                 summary: 'Additional English classes and UX profile courses'
             }
         ],
         connectionCount: 1043,
-        messagesCount: 1,
+        messagesCount: 17,
         dailyViewsCount: 367,
         searchAppearanceCount: 9,
         postsViewCount: 15,
@@ -95,4 +95,4 @@ export const mainUser = toUser([
             }
         ]
     }
-])
+)
