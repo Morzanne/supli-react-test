@@ -7,3 +7,11 @@ export const getMessagesCount = state => {
 export const isMessagesCountFetching = state => {
     return state[REDUCER_KEY].isFetchingDatas
 }
+
+export const getDailyViewCount = state => {
+    return state[REDUCER_KEY].data.dailyViewsCount
+}
+
+export const getUser = state => {
+    return state[REDUCER_KEY].data
+}
