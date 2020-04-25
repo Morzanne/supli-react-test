@@ -1,8 +1,24 @@
 .iconList{
     list-style: none;
-    display: flex;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
     padding: 0;
     margin: 0;
+}
+
+.iconList li {
+    display: inline-block;
+    height: 100%;
+    flex: 1 100%;
+}
+
+a{
+    color: black!important;
+    &:hover{
+        text-decoration: none!important;
+    }
 }
 
 ul > li{
@@ -11,8 +27,8 @@ ul > li{
     justify-content: center;
     align-items: center;
 
-    &:not(:last-child){
-        margin-right: 40px;
+    &:first-child{
+        display: none;
     }
 }
 
@@ -35,3 +51,6 @@ ul > li{
     right: 57px;
 }
 
+.linkedin{
+    width: 40px !important;
+  }
