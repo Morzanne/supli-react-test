@@ -1,4 +1,4 @@
-import { Record, List, fromJS } from 'immutable';
+import { Record, List, fromJS, Map } from 'immutable';
 
 export const User = Record(
     {
@@ -16,7 +16,7 @@ export const User = Record(
         dailyViewsCount: null,
         searchAppearanceCount: null,
         postsViewCount: null,
-        visitors: new List()
+        visitors: new List() || Map()
     },
     'User'
 )
