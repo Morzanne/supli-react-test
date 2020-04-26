@@ -48,7 +48,8 @@ export const mainUser = toUser(
                 location: 'Moscow State Linguistic University',
                 degreeName: 'Bachelor degree Field Of StudyComputer and Information Systems',
                 practicalDate: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
-                summary: 'Additional English classes and UX profile courses'
+                summary: 'Additional English classes and UX profile courses',
+                image: null
             }
         ],
         connectionCount: 1043,
@@ -95,6 +96,7 @@ export const mainUser = toUser(
                 location: "Around the world",
                 employementDate: "Jun 2016",
                 stillEmployed: true,
+                image: null,
                 description: "Freelance UX/UI designer, 80+ projects in web design, mobile app (IOS & android ) and creative projects. Open to offers."
             },
             {
@@ -103,6 +105,7 @@ export const mainUser = toUser(
                 location: "International",
                 employementDate: "Jun 2019",
                 stillEmployed: true,
+                image: null,
                 description: "Freelance UX/UI designer, 80+ projects in web design, mobile app (IOS & android ) and creative projects. Open to offers."
             }
         ]

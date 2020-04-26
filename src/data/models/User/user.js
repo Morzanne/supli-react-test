@@ -39,7 +39,8 @@ export const Experience = Record(
         location: null,
         employementDate: null,
         stillEmployed: null,
-        description: null
+        description: null,
+        image: null
     },
     'Experience'
 )
@@ -57,7 +58,8 @@ export const Education = Record(
         location: null,
         degreeName: null,
         practicalDate: null,
-        summary: null
+        summary: null,
+        image: null
     },
     'Education'
 )
