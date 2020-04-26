@@ -9,6 +9,7 @@ import DashBoardState from '../../components/home/DashBoardStats';
 import VisitorBoard from '../../components/home/visitorsBoard';
 import { CoursesDashboardContainer } from '../../components/home/CoursesDashboard/CoursesDashboardContainer';
 import About from '../../components/home/About';
+import Projects from '../../components/home/projects';
 
 const HomePage = () => (
     <UserProvider>
@@ -38,6 +39,9 @@ const HomePage = () => (
                                     <Col xs={12} md={8} className="mt-md-4 mb-4">
                                         <Col xs={12}>
                                             <About user={user} />
+                                        </Col>
+                                        <Col xs={12} className="mt-md-4 mb-4">
+                                            <Projects user={user} />
                                         </Col>
                                     </Col>
                                     <Col xs={12} md={4}>
