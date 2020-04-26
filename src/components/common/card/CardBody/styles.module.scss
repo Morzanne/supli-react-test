@@ -1,0 +1,15 @@
+.cardBody {
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .cardBody {
+    padding: 25px;
+  }
+}
+
+//Variants
+.standard {
+  color: darkgrey;
+  font-size: 14px;
+}

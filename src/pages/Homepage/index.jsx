@@ -4,26 +4,38 @@ import { Row, Container, Col } from 'reactstrap';
 import styles from './styles.module.scss';
 import Banner from '../../components/home/Banner';
 import { SummaryDashBoardContainer } from '../../components/home/SummaryBoard/SummaryDashboardContainer';
+import UserProvider from '../../components/Providers/UserProvider';
+import DashBoardState from '../../components/home/DashBoardStats';
 
 const HomePage = () => (
-    <Container className={styles.wrapper} fluid>
-        <Row>
-            <Container fluid={"md"} className={styles.innerWrapper}>
+    <UserProvider>
+        {({ user }) => (
+            <Container className={styles.wrapper} fluid>
                 <Row>
-                    <Container fluid={"md"}>
-                        <Col xs={12} md={8}>
-                            <Banner />
-                            <div>
-                                <SummaryDashBoardContainer />
-                            </div>
-                        </Col>
+                    <Container fluid={"md"} className={styles.innerWrapper}>
+                        <Container fluid={"md"}>
+                            <Row>
+                                <Col xs={12} md={8} className="mt-md-4 mb-4">
+                                    <Col xs={12}>
+                                        <Banner />
+                                        <div>
+                                            <SummaryDashBoardContainer user={user} />
+                                        </div>
+                                    </Col>
+                                </Col>
+                                <Col xs={12} md={4} className="h-auto mt-md-4 mb-4">
+                                    <Col xs={12} className="h-100">
+                                        <DashBoardState user={user} />
+                                    </Col>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Container>
-
                 </Row>
+            </Container >
+        )}
+    </UserProvider>
 
-            </Container>
-        </Row>
-    </Container>
 )
 
 export default HomePage;
