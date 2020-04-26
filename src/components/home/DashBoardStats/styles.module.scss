@@ -1,0 +1,63 @@
+.card {
+  border: none;
+  height: 100%;
+}
+
+.stat{
+  display: block;
+}
+
+.statWrapper::first-line{
+  font-size: 45px;
+  font-weight: 600;
+  color: #006097;
+}
+
+.cardBody{
+  padding: 0 20px 20px 20px!important;
+}
+
+.title {
+  font-weight: bold;
+  text-align: left;
+  font-size: 12px;
+  color: black;
+  height: 1em;
+  line-height: 1em;
+  overflow: hidden;
+}
+
+.row {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+}
+
+.cardHeader {
+  padding: 7px 30px 0px 30px;
+  background: none;
+}
+
+.link {
+  color: #006097!important;
+  font-size: 12px;
+}
+
+@media (min-width: 576) and (max-width: 992) {
+  .card {
+    border: solid 1px lightgrey;
+  }
+}
+
+@media (max-width: 575) {
+  .card {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px){
+  .statWrapper{
+    text-align: center;
+  }
+}
