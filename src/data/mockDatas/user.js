@@ -17,7 +17,7 @@ export const mainUser = toUser(
                 date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             },
             {
-                title: 'SCTHON event brand identity',
+                title: 'SCTHON brand identity',
                 image: null,
                 description: 'Graphic design',
                 date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
@@ -26,12 +26,6 @@ export const mainUser = toUser(
                 title: 'Drozd, Brand identity 2016',
                 image: null,
                 description: 'Graphic Design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
-            },
-            {
-                title: 'Random',
-                image: null,
-                description: 'UX/UI design',
                 date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
             }
         ],
