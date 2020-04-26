@@ -14,7 +14,6 @@ export const VisitorBoard = ({ user }) => {
     return (
         <Card className={styles.card}>
             <CardHeader className={styles.cardHeader}>
-
                 <div className={styles.row}>
                     <div className={styles.title}>VISITORS</div>
                     <a href="#" className={styles.link}>

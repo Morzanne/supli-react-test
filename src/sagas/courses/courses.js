@@ -1,4 +1,4 @@
-import { put, takeLatest } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 import { fetchCoursesActionSuccess, fetchCoursesActionFailure, fetchCoursesActionRequest } from '../../actions/courses/courses';
 
 
@@ -11,5 +11,5 @@ export function* watchFetchCourses({ payload: courses }) {
 }
 
 export const sagas = [
-    takeLatest(fetchCoursesActionRequest, watchFetchCourses)
+    takeEvery(fetchCoursesActionRequest, watchFetchCourses)
 ]

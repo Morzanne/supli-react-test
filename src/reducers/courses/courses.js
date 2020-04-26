@@ -13,12 +13,11 @@ const reducer = createReducer(
         },
         [fetchCoursesActionRequest]: state =>
             state.set('isFetchingDatas', true)
-    }
+    },
+    new InitialState({
+        data: Map()
+    })
 );
-
-new InitialState({
-    data: Map()
-})
 
 export default {
     [REDUCER_KEY]: reducer

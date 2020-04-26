@@ -10,18 +10,13 @@ const VideoPlayer = ({ className, url, title, width, height, ...rest }) => {
   return (
     <div className={cx(className, styles.container)}>
       <ReactPlayer url={url} {...rest} width={width} height={height} />
-      <div className={styles.title}>
-        <span className={styles.icon}>
-          <FontAwesomeIcon icon={faPlay} />
-        </span>
-      </div>
     </div>
   );
 };
 
 VideoPlayer.defaultProps = {
   width: '100%',
-  height: '200px',
+  height: '100px',
 };
 
 export default VideoPlayer;

@@ -17,9 +17,11 @@ export const CourseList = Record(
     'CourseList'
 )
 
-export const toCourseList = courseList =>
-    new CourseList(
+export const toCourseList = courseList => {
+    return new CourseList(
         fromJS({
-            courses: new List(courseList.courses.map(course => new Course(course)))
+            ...courseList,
+            courses: courseList ? new List(courseList.map(course => new Course(course))) : new Map()
         })
     )
+}
