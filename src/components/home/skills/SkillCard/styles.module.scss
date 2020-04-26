@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    border: 1px solid lightgrey;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.endoresmentWrapper{
+    display: flex;
+}
+
+.remainingEndoresments{
+    display: flex;
+    justify-content: center;
+    background-color: #006097;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translateX(-21px);
+    font-size: 12px;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.recommandationCount{
+    color: #006097 ;
+    font-weight: bold;
+}
