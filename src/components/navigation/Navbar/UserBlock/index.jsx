@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavItem } from 'reactstrap';
 import Img from '../../../common/Img';
+import PT from 'prop-types';
 
 import styles from './styles.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { User } from '../../../../data/models/User/user';
 
 
 const UserBlock = ({ user }) => {
@@ -29,6 +31,10 @@ const UserBlock = ({ user }) => {
             </div>
         </div>
     </NavItem>
+}
+
+UserBlock.propTypes = {
+    user: PT.instanceOf(User)
 }
 
 

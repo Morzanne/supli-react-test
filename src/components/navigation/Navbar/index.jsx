@@ -9,6 +9,8 @@ import { UserBlockContainer } from './UserBlock/UserBlockContainer';
 import SettingBar from './SettingBar';
 import InnerSearchBar from './InnerSearchBar';
 
+import PT from 'prop-types';
+
 const NavigationBar = ({ messagesCount }) => (
     <Navbar
         light
@@ -43,5 +45,9 @@ const NavigationBar = ({ messagesCount }) => (
         </Container >
     </Navbar >
 )
+
+NavigationBar.propTypes = {
+    messagesCount: PT.number
+}
 
 export default NavigationBar;

@@ -3,7 +3,7 @@
     position: relative;
     z-index: 300;
     padding: 0;
-    height: 70px;
+    max-height: 70px;
   }
 
   .row.display-flex {
@@ -55,12 +55,21 @@
     }
   }
 
+  @media (min-width:768px) and (max-width:922px){
+    .navBar{
+      max-height: 100px;
+    }
+  }
+
   @media (max-width: 768px - 1){
     .searchFormWrapper, .userBlockWrapper, .settingBarWrapper{
       display: none;
     }
     .responsiveSearchBar{
       display: block;
+    }
+    .navBar{
+      max-height: none;
     }
   }
 
