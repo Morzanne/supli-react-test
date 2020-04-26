@@ -1,11 +1,13 @@
 import React from 'react';
-import { Row, Container, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+import PT from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow, faHashtag } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './styles.module.scss';
 import Img from '../../common/Img';
+import { User } from '../../../data/models/User/user';
 
 const SummaryDashboard = ({ user }) => {
     return <Row noGutters className={styles.row}>
@@ -45,5 +47,10 @@ const SummaryDashboard = ({ user }) => {
         </Col>
     </Row>
 }
+
+SummaryDashboard.propTypes = {
+    user: PT.instanceOf(User)
+}
+
 
 export default SummaryDashboard;

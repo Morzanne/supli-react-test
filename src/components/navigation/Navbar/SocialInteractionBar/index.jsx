@@ -2,7 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRss, faUserFriends, faSuitcase, faCommentAlt, faBell } from '@fortawesome/free-solid-svg-icons';
 import Img from '../../../common/Img/index';
-import linkedin from '../../../../images/linkedin.png'
+import linkedin from '../../../../images/linkedin.png';
+import PT from 'prop-types';
 
 import styles from './styles.module.scss';
 
@@ -59,5 +60,9 @@ const SocialInteractionBar = ({ messagesCount }) => (
         </ul>
     </>
 )
+
+SocialInteractionBar.propTypes = {
+    messagesCount: PT.number,
+}
 
 export default SocialInteractionBar;
