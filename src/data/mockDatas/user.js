@@ -14,19 +14,19 @@ export const mainUser = toUser(
                 title: 'Zara redesign concept',
                 image: null,
                 description: 'UX/UI design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'dd-MM-yyyy'),
             },
             {
                 title: 'SCTHON brand identity',
                 image: null,
                 description: 'Graphic design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'dd-MM-yyyy'),
             },
             {
                 title: 'Drozd, Brand identity 2016',
                 image: null,
                 description: 'Graphic Design',
-                date: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
+                date: format(new Date('December 17, 1995 03:24:00'), 'dd-MM-yyyy'),
             }
         ],
         skills: [
@@ -86,6 +86,24 @@ export const mainUser = toUser(
                 lastName: 'Alexander',
                 profilePic: null,
                 profileResume: 'Team lead at Google'
+            }
+        ],
+        experiences : [
+            {
+                title: "Freelance UX/UI designer",
+                employeer: "Self Employed",
+                location: "Around the world",
+                employementDate: "Jun 2016",
+                stillEmployed: true,
+                description: "Freelance UX/UI designer, 80+ projects in web design, mobile app (IOS & android ) and creative projects. Open to offers."
+            },
+            {
+                title: "UX/UI designer",
+                employeer: "Upwork",
+                location: "International",
+                employementDate: "Jun 2019",
+                stillEmployed: true,
+                description: "Freelance UX/UI designer, 80+ projects in web design, mobile app (IOS & android ) and creative projects. Open to offers."
             }
         ]
     }
