@@ -7,6 +7,7 @@ import { SummaryDashBoardContainer } from '../../components/home/SummaryBoard/Su
 import UserProvider from '../../components/Providers/UserProvider';
 import DashBoardState from '../../components/home/DashBoardStats';
 import VisitorBoard from '../../components/home/visitorsBoard';
+import { CoursesDashboardContainer } from '../../components/home/CoursesDashboard/CoursesDashboardContainer';
 
 const HomePage = () => (
     <UserProvider>
@@ -34,14 +35,14 @@ const HomePage = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={8} className="mt-md-4 mb-4">
-                                        NULL
-                                </Col>
+                                    </Col>
                                     <Col xs={12} md={4}>
-                                        {user &&
-                                            <Col xs={12}>
-                                                <VisitorBoard user={user} />
-                                            </Col>
-                                        }
+                                        <Col xs={12} className="mt-md-4 mb-4" >
+                                            <VisitorBoard user={user} />
+                                        </Col>
+                                        <Col xs={12} className="mt-md-4 mb-4">
+                                            <CoursesDashboardContainer />
+                                        </Col>
                                     </Col>
                                 </Row>
                             </Row>
