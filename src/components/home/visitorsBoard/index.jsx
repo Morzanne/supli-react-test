@@ -1,5 +1,5 @@
 import React from 'react';
-import PT, { object } from 'prop-types';
+import PT from 'prop-types';
 
 import { Row, Col } from 'reactstrap';
 
@@ -23,8 +23,8 @@ export const VisitorBoard = ({ user }) => {
             </CardHeader>
             <CardBody className={styles.cardBody}>
                 <Row>
-                    {user.visitors && user.visitors.map(visitor => (
-                        <Col className={styles.visitorWrapper}>
+                    {user.visitors && user.visitors.map((visitor, index) => (
+                        <Col key={index} className={styles.visitorWrapper}>
                             <Visitor visitor={visitor} />
                         </Col>
                     ))}

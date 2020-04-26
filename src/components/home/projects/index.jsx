@@ -25,8 +25,8 @@ const Projects = ({ user }) => {
             </CardHeader>
             <CardBody className={styles.cardBody}>
                 <Row>
-                    {user.projects && user.projects.map(project => (
-                        <Col xs={12} sm={6} lg={4} className={styles.visitorWrapper}>
+                    {user.projects && user.projects.map((project, index) => (
+                        <Col key={index} xs={12} sm={6} lg={4} className={styles.visitorWrapper}>
                             <Project projectUnit={project} />
                         </Col>
                     ))}

@@ -1,9 +1,7 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
 import PT from 'prop-types';
 import cx from 'classnames';
 
-import { Card, CardHeader, CardBody, CardFooter } from '../../../common/card/index';
 import project from '../../../../images/project.jpg'
 import styles from './styles.module.scss';
 

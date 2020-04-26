@@ -1,0 +1,13 @@
+@for $i from 2 through 4 {
+    .profilePic:nth-child(#{$i}) {
+        transform: translateX(($i + ($i * -(10 + $i)))% - 1000%);
+    }
+}
+
+.profilePic{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}

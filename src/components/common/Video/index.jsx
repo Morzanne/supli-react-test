@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay} from '@fortawesome/free-solid-svg-icons';
 import cx from 'classnames';
 
 import styles from './styles.module.scss';
