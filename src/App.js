@@ -7,11 +7,13 @@ import { sagaMiddleware } from './middleware';
 import { NavbarContainer } from './components/navigation/Navbar/NavbarContainer';
 
 import './App.scss';
+import HomePage from './pages/Homepage';
 
 
 const App = () => (
   <Provider store={store}>
     <NavbarContainer />
+    <HomePage />
   </Provider>
 );
 
