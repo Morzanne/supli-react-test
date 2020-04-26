@@ -1,0 +1,35 @@
+.footer{
+    background-color: white!important;
+  }
+  
+  .row {
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid lightgrey;
+    }
+  
+    .title{
+      font-weight: bold;
+      text-align: left;
+      font-size: 18px;
+      color: black!important;
+      height: 1em;
+      line-height: 1em;
+      overflow: hidden;
+    }
+  
+    .cardHeader{
+        text-align: left;
+        padding: 7px 30px 0px 30px;
+        background: none;
+    }
+    .footer{
+      font-size: 14px !important;
+    }
+
+    .projectCount{
+      font-weight: lighter;
+      color: grey;
+    }
+  
