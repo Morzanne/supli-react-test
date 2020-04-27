@@ -46,9 +46,9 @@ export const mainUser = toUser(
         educations: [
             {
                 location: 'Moscow State Linguistic University',
+                degreeName: 'Bachelor degree Field Of StudyComputer and Information Systems',
                 startYear: new Date('December 17, 1995 03:24:00'),
                 endYear: new Date('December 17, 2000 03:24:00'),
-                degreeName: 'Bachelor degree Field Of StudyComputer and Information Systems',
                 summary: 'Additional English classes and UX profile courses',
                 image: null
             }
@@ -96,6 +96,7 @@ export const mainUser = toUser(
                 employeer: "Self Employed",
                 location: "Around the world",
                 employementDate: "Jun 2016",
+                startingDate: new Date(2019, 11, 25, 8),
                 stillEmployed: true,
                 image: null,
                 description: "Freelance UX/UI designer, 80+ projects in web design, mobile app (IOS & android ) and creative projects. Open to offers."
@@ -104,6 +105,7 @@ export const mainUser = toUser(
                 title: "UX/UI designer",
                 employeer: "Upwork",
                 location: "International",
+                startingDate: new Date(2014, 12, 17, 2),
                 employementDate: "Jun 2019",
                 stillEmployed: true,
                 image: null,
