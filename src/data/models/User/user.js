@@ -57,7 +57,8 @@ export const Education = Record(
     {
         location: null,
         degreeName: null,
-        practicalDate: null,
+        startYear:null,
+        endYear:null,
         summary: null,
         image: null
     },

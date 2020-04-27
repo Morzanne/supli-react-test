@@ -46,8 +46,9 @@ export const mainUser = toUser(
         educations: [
             {
                 location: 'Moscow State Linguistic University',
+                startYear: new Date('December 17, 1995 03:24:00'),
+                endYear: new Date('December 17, 2000 03:24:00'),
                 degreeName: 'Bachelor degree Field Of StudyComputer and Information Systems',
-                practicalDate: format(new Date('December 17, 1995 03:24:00'), 'yyyy-MM-dd'),
                 summary: 'Additional English classes and UX profile courses',
                 image: null
             }
