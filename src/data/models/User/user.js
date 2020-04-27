@@ -16,7 +16,8 @@ export const User = Record(
         dailyViewsCount: null,
         searchAppearanceCount: null,
         postsViewCount: null,
-        visitors: new List() || Map()
+        visitors: new List() || Map(),
+        experiences: new List() || null
     },
     'User'
 )
@@ -31,6 +32,19 @@ export const Project = Record(
     'Project'
 )
 
+export const Experience = Record(
+    {
+        title: null,
+        employeer: null,
+        location: null,
+        employementDate: null,
+        stillEmployed: null,
+        description: null,
+        image: null
+    },
+    'Experience'
+)
+
 export const Skill = Record(
     {
         title: null,
@@ -43,8 +57,10 @@ export const Education = Record(
     {
         location: null,
         degreeName: null,
-        practicalDate: null,
-        summary: null
+        startYear:null,
+        endYear:null,
+        summary: null,
+        image: null
     },
     'Education'
 )
@@ -57,6 +73,7 @@ export const toUser = user => {
             skills: user.skills ? new List(user.skills.map(skill => new Skill(skill))) : null,
             educations: user.educations ? new List(user.educations.map(education => new Education(education))) : null,
             visitors: user.visitors ? new List(user.visitors.map(visitor => toUser(visitor))) : null,
+            experiences: user.experiences ? new List(user.experiences.map(experience => new Experience(experience))) : null
         })
     );
 }

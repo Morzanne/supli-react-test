@@ -24,7 +24,7 @@ const Visitor = ({ visitor }) => {
 }
 
 Visitor.propTypes = {
-    user: PT.object
+    visitor: PT.object
 }
 
 
