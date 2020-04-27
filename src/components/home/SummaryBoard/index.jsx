@@ -38,7 +38,7 @@ const SummaryDashboard = ({ user }) => {
             </Row>
             <Row className={styles.buttonWrapper}>
                 <div>
-                    <button className={styles.infoButton}>CONTACT INFOS</button>
+                    <button className={styles.infoButton}>CONTACT INFO</button>
                 </div>
                 <div>
                     <button className={styles.connectionCount}>{user.connectionCount} CONNECTIONS</button>
