@@ -12,6 +12,7 @@ import About from '../../components/home/About';
 import Projects from '../../components/home/projects';
 import SkillDashBoard from '../../components/home/skills/SkillDashboard/index'
 import EducationList from '../../components/home/educationList/EducationList';
+import ExperienceList from '../../components/home/experienceList';
 
 const HomePage = () => (
     <UserProvider>
@@ -47,6 +48,9 @@ const HomePage = () => (
                                         </Col>
                                         <Col xs={12} className="mt-md-4 mb-4">
                                             <SkillDashBoard user={user} />
+                                        </Col>
+                                        <Col xs={12} className="mt-md-4 mb-4">
+                                            <ExperienceList user={user} />
                                         </Col>
                                         <Col xs={12} className="mt-md-4 mb-4">
                                             <EducationList user={user} />
