@@ -37,6 +37,7 @@ export const Experience = Record(
         title: null,
         employeer: null,
         location: null,
+        startingDate: null,
         employementDate: null,
         stillEmployed: null,
         description: null,
