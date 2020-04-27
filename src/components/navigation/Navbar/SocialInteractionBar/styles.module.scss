@@ -37,6 +37,10 @@ a{
     font-weight: bold;
 }
 
+.messageIcon{
+    position: relative;
+}
+
 .messageCount{
     border-radius: 50%;
     width: 15px;
@@ -48,7 +52,7 @@ a{
     justify-content: center;
     position: absolute;
     top: -5px;
-    right: 120px;
+    right: 0px;
 }
 
 .linkedin{

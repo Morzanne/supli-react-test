@@ -41,7 +41,7 @@ const SocialInteractionBar = ({ messagesCount }) => (
             </li>
             <li>
                 <a href="#">
-                    <div>
+                    <div className={styles.messageIcon}>
                         <FontAwesomeIcon icon={faCommentAlt} />
                         <span className={styles.messageCount}>{messagesCount}</span>
                     </div>
