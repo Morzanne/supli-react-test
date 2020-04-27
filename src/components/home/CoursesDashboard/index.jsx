@@ -35,7 +35,7 @@ export const CoursesDashboard = ({ courses }) => {
                 </Row>
             </CardBody>
             <CardFooter className={styles.footer}>
-                <span>SEE ALL RECOMMENDATIONS</span>
+            <a href="#"><span>SEE ALL RECOMMENDATIONS</span></a>
             </CardFooter>
         </Card>
     )

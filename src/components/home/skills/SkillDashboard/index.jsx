@@ -27,7 +27,7 @@ const SkillDashboard = ({ user }) => {
                 </Row>
             </CardBody>
             <CardFooter className={styles.footer}>
-                <span>SHOW ALL (17)</span>
+                <a href="#"><span>SHOW ALL (17)</span></a>
             </CardFooter>
         </Card>
     )
