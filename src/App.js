@@ -8,12 +8,13 @@ import { NavbarContainer } from './components/navigation/Navbar/NavbarContainer'
 
 import './App.scss';
 import HomePage from './pages/Homepage';
-
+import Footer from './components/footer';
 
 const App = () => (
   <Provider store={store}>
     <NavbarContainer />
     <HomePage />
+    <Footer />
   </Provider>
 );
 
