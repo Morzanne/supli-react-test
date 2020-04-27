@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+.commentIcon{
+    position: relative;
+}
+
 .iconList li {
     display: inline-block;
     height: 100%;
@@ -48,7 +52,7 @@ a{
     justify-content: center;
     position: absolute;
     top: -5px;
-    right: 120px;
+    right: 0px;
 }
 
 .linkedin{

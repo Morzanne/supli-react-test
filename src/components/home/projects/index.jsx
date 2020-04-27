@@ -33,7 +33,7 @@ const Projects = ({ user }) => {
                 </Row>
             </CardBody>
             <CardFooter className={styles.footer}>
-                <span>SHOW ALL (12)</span>
+                <span><a href="#">SHOW ALL (12)</a></span>
             </CardFooter>
         </Card>
     )

@@ -24,7 +24,7 @@ const About = ({ user }) => {
                 </Row>
             </CardBody>
             <CardFooter className={styles.footer}>
-                <span>SEE MORE</span>
+                <span><a href="#">SEE MORE</a></span>
             </CardFooter>
         </Card>
     )

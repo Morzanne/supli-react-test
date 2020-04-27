@@ -17,10 +17,10 @@ export const Footer = () => {
                     <Col xs={12} md={1} className={styles.linkeDinWrapper}>
                         <Img src={linkedin} alt="linkedin logo" className={styles.linkedin} />
                     </Col>
-                    <Col xs={12} xl={6}>
+                    <Col xs={12} xl={8}>
                         <NavigationBlock />
                     </Col>
-                    <Col xs={12} xl={2}>
+                    <Col xs={12} xl={3}>
                         <FastAccessBlock />
                     </Col>
                 </Row>
