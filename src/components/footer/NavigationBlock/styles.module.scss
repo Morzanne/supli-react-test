@@ -1,0 +1,52 @@
+.row {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title{
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+    color: black!important;
+    height: 1em;
+    line-height: 1em;
+    overflow: hidden;
+  }
+
+  .cardHeader{
+      text-align: left;
+      padding: 7px 30px 0px 30px;
+      background: none;
+  }
+
+  .listWrapper{
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.cardBody{
+  padding: 0 1.25rem 0 1.25rem !important;
+}
+
+.listWrapper > li {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+@media (max-width:576px){
+    .listWrapper{
+        text-align: center;
+    }
+
+    .row {
+        justify-content: center;
+      }
+    
+}
