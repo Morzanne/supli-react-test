@@ -12,10 +12,8 @@ export const UserProvider = ({ children }) => {
     // set the timeout to simulate a basic async api call
     const fetchUser = useCallback(async () => {
         const user = await new Promise(resolve => {
-            setTimeout(() => {
-                resolve(mainUser)
-            })
-        }, 3000);
+            resolve(mainUser)
+        });
 
         dispatch(fetchUserActionRequest(user))
     }, [dispatch])
@@ -28,6 +26,10 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         fetchUser()
     }, [fetchUser])
+
+    if (!user) {
+        return null
+    }
 
     return children({ user: user })
 }

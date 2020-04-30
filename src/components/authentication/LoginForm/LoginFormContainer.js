@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import { withRouter } from 'react-router';
 import LoginForm from '.';
+import { loginSupliUserActionRequest } from '../../../actions/authenticatedSupliUser/authenticatedSupliUser';
 
 
 export class LoginFormContainer extends Component {
@@ -30,11 +31,18 @@ export class LoginFormContainer extends Component {
         }
     };
 
+    handleSubmit = form => {
+        const { dispatch } = this.props
+
+        dispatch(loginSupliUserActionRequest({ form: form }))
+    }
+
     render() {
+        const { lumiere } = this.props
         return (
             <LoginForm
-                {...this.props}
                 onSubmitSuccess={this.handleLoginSuccess}
+                onSubmit={this.handleSubmit}
             />
         );
     }
