@@ -1,6 +1,10 @@
 .label {
     height: 100%;
   }
+
+  .input{
+    border: 1px solid black!important;
+  }
   
   @media (max-width: 992px) {
     .formGroup {

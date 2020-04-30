@@ -6,23 +6,12 @@ import { Label } from '../Label/index';
 
 import styles from './styles.module.scss';
 
-const LoginInput = ({ type, label, name, input, meta, autoComplete, ...props }) => {
+const LoginInput = ({ type, placeholder, name, input, meta, autoComplete, ...props }) => {
   const isValid = !Boolean(meta.error) && !meta.submitFailed;
   const showValid = meta.touched;
   return (
     <FormGroup row className={styles.formGroup}>
-      <Col lg="3" xs="12">
-        <Label
-          className={styles.label}
-          center
-          for={name}
-          label={label}
-          weight="bold"
-          align="right"
-          withColon
-        />
-      </Col>
-      <Col lg="9" xs="12">
+      <Col xs="12">
         <Input
           className={cx(styles.input, {
             'is-invalid': showValid && !isValid,
@@ -30,6 +19,7 @@ const LoginInput = ({ type, label, name, input, meta, autoComplete, ...props }) 
           })}
           autoComplete={autoComplete}
           name={name}
+          placeholder={placeholder}
           type={type}
           {...input}
           {...props}

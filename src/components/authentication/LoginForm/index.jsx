@@ -19,14 +19,21 @@ const LoginForm = ({
     handleSubmit,
     onSubmit,
 }) => {
+
+    const placeHolder = {
+        login: "E-mail",
+        password: "Mot de passe"
+    }
+
     const registrationSearch = {};
     if (registrationRedirect) registrationSearch.redirect = registrationRedirect;
+
     return (
-        <Form onSubmit={handleSubmit(onSubmit)} data-test="login-form">
+        <Form onSubmit={handleSubmit(onSubmit)} data-test="login-form" className={styles.form}>
             <Row className={styles.row}>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                     <Field
-                        label="login"
+                        placeholder={placeHolder.login}
                         name="login"
                         type="text"
                         autoComplete={LOGIN_FORM.fields.login}
@@ -35,9 +42,9 @@ const LoginForm = ({
                         data-test="username-input"
                     />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                     <Field
-                        label="Password"
+                        placeholder={placeHolder.password}
                         name={LOGIN_FORM.fields.password}
                         type="password"
                         autoComplete="current-password"
@@ -46,7 +53,7 @@ const LoginForm = ({
                         data-test="password-input"
                     />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                     <div className={styles.buttons}>
                         <button className={styles.button}>
                             login toi bon de la
