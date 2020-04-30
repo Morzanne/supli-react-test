@@ -5,7 +5,7 @@ import linkedin_large from '../../images/linkedin_large.png';
 import styles from './styles.module.scss';
 import { Card, CardHeader, CardBody } from '../../components/common/card';
 import Img from '../../components/common/Img';
-import { LoginFormContainer } from '../../components/authentication/LoginForm/LoginFormContainer';
+import LoginFormContainer from '../../components/authentication/LoginForm/LoginFormContainer';
 
 const LoginPage = () => (
     <Container className={styles.container}>

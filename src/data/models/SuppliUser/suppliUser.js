@@ -24,12 +24,9 @@ export const AuthenticatedSupliUser = Record(
     'AuthenticatedSupliUser'
 )
 
-
-Object.defineProperty(AuthenticatedSupliUser.prototype, 'isAuthenticated', {
-    get: function () {
-        return this.value !== null;
-    }
-})
+AuthenticatedSupliUser.prototype.isAuthenticated = function() {
+    return this.value !== null;
+  };
 
 export const toAuthenticatedSupliUser = authenticatedSupliUser => {
     return new AuthenticatedSupliUser(

@@ -6,7 +6,7 @@ import LoginForm from '.';
 import { loginSupliUserActionRequest } from '../../../actions/authenticatedSupliUser/authenticatedSupliUser';
 
 
-export class LoginFormContainer extends Component {
+class LoginFormContainer extends Component {
 
     handleLoginSuccess = () => {
         const {
