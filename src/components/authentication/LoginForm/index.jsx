@@ -56,7 +56,7 @@ const LoginForm = ({
                 <Col xs={12}>
                     <div className={styles.buttons}>
                         <button className={styles.button}>
-                            login toi bon de la
+                            S'identifier !
                         </button>
                     </div>
                 </Col>
