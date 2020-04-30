@@ -2,7 +2,6 @@ import { call } from 'redux-saga/effects';
 
 import { buildBody } from './utils';
 import { handleHttpErrors } from './handlers';
-import { urls } from './constants';
 
 export function* executeRequest({
     url: baseUrl,
@@ -11,8 +10,7 @@ export function* executeRequest({
     requestConfig = { params: {}, headers: {} },
     responseConfig = {},
 }) {
-    debugger
-    const { url, request } = yield call(buildRequest, baseUrl, method, route, requestConfig);
+    const { request } = yield call(buildRequest, baseUrl, method, route, requestConfig);
     const result = yield call(fetch, "https://supli-staging.mysupli.com/api/auth-tokens", request);
     const response = yield call(buildResponse, result, responseConfig);
     return response;
@@ -34,13 +32,16 @@ export function* executeRequestWithAuth(
 
 function* buildRequest(baseUrl, method, route, config) {
     const { params, headers } = config;
-    console.log(config)
     const fullUrl = `${baseUrl}${route}`;
     const body = yield call(buildBody, method, config.body);
     return {
         fullUrl,
         request: {
             method: method.name,
+            headers: {
+                ...method.defaultHeaders,
+                ...headers,
+              },
             params,
             body,
         },

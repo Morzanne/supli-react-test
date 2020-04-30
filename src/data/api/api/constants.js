@@ -6,6 +6,7 @@ export const codes = {
 export const methods = {
     POST: {
       name: 'POST',
+      canHaveBody: true,
       defaultHeaders: {
         'Content-type': 'application/json',
       },
