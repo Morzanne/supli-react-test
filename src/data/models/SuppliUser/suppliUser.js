@@ -31,13 +31,13 @@ Object.defineProperty(AuthenticatedSupliUser.prototype, 'isAuthenticated', {
     }
 })
 
-export const toAuthenticatedSupliUser = authenticatedSupliUser =>
-    new AuthenticatedSupliUser(
+export const toAuthenticatedSupliUser = authenticatedSupliUser => {
+    return new AuthenticatedSupliUser(
         fromJS({
-            ...authenticatedSupliUser,
-            createdAt: parseFromApiDate(authenticatedSupliUser.createdAt)
+            ...authenticatedSupliUser
         })
     )
+}
 
 //UTIL
 export function parseFromApiDate(date) {

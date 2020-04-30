@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { SubmissionError } from 'redux-form/immutable';
 
 import api from '../../data/api/auth/api';
@@ -6,7 +6,7 @@ import { loginSupliUserActionSuccess, loginSupliUserActionFailure, loginSupliUse
 
 export function* sendLoginData({ login, password }) {
   const authenticatedSuppliUser = yield call(api.login, login, password);
-  yield put(loginSupliUserActionSuccess(authenticatedSuppliUser));
+  yield put(loginSupliUserActionSuccess({ payload: authenticatedSuppliUser }));
 }
 
 function buildFormErrors(error) {
@@ -33,7 +33,7 @@ export function* submitLoginForm({ payload: { form } }) {
 }
 
 export const sagas = [
-  takeEvery(
+  takeLatest(
     loginSupliUserActionRequest,
     submitLoginForm
   )
