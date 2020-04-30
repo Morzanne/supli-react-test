@@ -1,0 +1,10 @@
+.required:after {
+    content: " *";
+    color: red;
+  }
+  
+  @media (max-width: 576px) {
+    .label {
+      font-size: 0.9em;
+    }
+  }
