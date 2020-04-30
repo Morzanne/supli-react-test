@@ -19,7 +19,7 @@ const App = () => (
     <ConnectedRouter history={history}>
       <NavbarContainer />
       <HomePage />
-      <LoginFormContainer lumiere={"troli"} />
+      <LoginFormContainer />
       <Footer />
     </ConnectedRouter>
   </Provider>

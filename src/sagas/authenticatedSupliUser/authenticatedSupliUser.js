@@ -4,14 +4,8 @@ import { SubmissionError } from 'redux-form/immutable';
 import api from '../../data/api/auth/api';
 import { loginSupliUserActionSuccess, loginSupliUserActionFailure, loginSupliUserActionRequest } from '../../actions/authenticatedSupliUser/authenticatedSupliUser'
 
-export function* sendLoginData({ payload: { form } }) {
-  const body = {
-    ...form,
-    login: form.login,
-    password: form.password,
-  };
-
-  const authenticatedSuppliUser = yield call(api.login, body.login, body.password);
+export function* sendLoginData({ login, password }) {
+  const authenticatedSuppliUser = yield call(api.login, login, password);
   yield put(loginSupliUserActionSuccess(authenticatedSuppliUser));
 }
 
@@ -29,9 +23,9 @@ function buildFormErrors(error) {
   };
 }
 
-export function* submitLoginForm({ payload: { values } }) {
+export function* submitLoginForm({ payload: { form } }) {
   try {
-    yield call(sendLoginData, values);
+    yield call(sendLoginData, form);
   } catch (error) {
     const errors = buildFormErrors(error);
     yield put(loginSupliUserActionFailure(new SubmissionError(errors)));

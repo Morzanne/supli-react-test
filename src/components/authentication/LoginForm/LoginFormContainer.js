@@ -12,12 +12,10 @@ export class LoginFormContainer extends Component {
         const {
             location: { dispatchOnAuthenticationSuccess, redirect },
             redirection,
-            toggle,
             dispatch,
             onLoginSuccess,
         } = this.props;
 
-        toggle();
         if (dispatchOnAuthenticationSuccess) {
             dispatch(dispatchOnAuthenticationSuccess);
         }
@@ -33,12 +31,10 @@ export class LoginFormContainer extends Component {
 
     handleSubmit = form => {
         const { dispatch } = this.props
-
         dispatch(loginSupliUserActionRequest({ form: form }))
     }
 
     render() {
-        const { lumiere } = this.props
         return (
             <LoginForm
                 onSubmitSuccess={this.handleLoginSuccess}

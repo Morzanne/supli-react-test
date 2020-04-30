@@ -5,31 +5,42 @@ import { handleHttpErrors } from './handlers';
 import { urls } from './constants';
 
 export function* executeRequest({
+    url: baseUrl,
     method,
-    url,
     route,
     requestConfig = { params: {}, headers: {} },
     responseConfig = {},
 }) {
-    const { request } = yield call(buildRequest, method, route, requestConfig);
-    const result = yield call(fetch, url, request);
+    debugger
+    const { url, request } = yield call(buildRequest, baseUrl, method, route, requestConfig);
+    const result = yield call(fetch, "https://supli-staging.mysupli.com/api/auth-tokens", request);
     const response = yield call(buildResponse, result, responseConfig);
     return response;
 }
 
-function* buildRequest(method, endpoint, config) {
+export function* executeRequestWithAuth(
+    executeRequest,
+    route,
+    requestConfig = {},
+    responseConfig = {}
+) {
+    try {
+        const response = yield call(executeRequest, route, requestConfig, responseConfig);
+        return response;
+    } catch (error) {
+        throw error;
+    }
+}
+
+function* buildRequest(baseUrl, method, route, config) {
     const { params, headers } = config;
-    const baseUrl = urls.API
-    const fullUrl = `${baseUrl}${endpoint}`;
-    const body = yield call(buildBody, method);
+    console.log(config)
+    const fullUrl = `${baseUrl}${route}`;
+    const body = yield call(buildBody, method, config.body);
     return {
         fullUrl,
         request: {
             method: method.name,
-            headers: {
-                ...method.defaultHeaders,
-                ...headers,
-            },
             params,
             body,
         },

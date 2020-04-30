@@ -4,10 +4,11 @@ import routes from '../auth/routes';
 import api from '../auth/index';
 import { AuthenticatedSupliUser } from '../../models/SuppliUser/suppliUser';
 
-function* login(username, password) {
+function* login(login, password) {
+  console.log(login)
   const { body } = yield call(api.post, routes.POST_AUTH_LOGIN, {
     body: {
-      username: username,
+      login: login,
       password: password,
     },
   });
