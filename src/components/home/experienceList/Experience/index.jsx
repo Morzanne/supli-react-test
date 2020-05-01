@@ -40,7 +40,7 @@ export const Experience = ({ experience }) => {
                         <span className={styles.corporateEmployeer}>{experience.location}</span>
                     </span>
                     <span className={cx(styles.message, styles.praticalDate)}>
-                        {experience.stillEmployed ? (experience.employementDate + '--' + 'Present') : (experience.employementDate + '--' + 'Unknow')} <span className={styles.timeOfEmployment}>{extractDurationOfJob(experience.startingDate, experience.stillEmployed)}</span>
+                        {experience.stillEmployed ? (experience.employementDate + '--Present') : (experience.employementDate + '--Unknow')} <span className={styles.timeOfEmployment}>{extractDurationOfJob(experience.startingDate, experience.stillEmployed)}</span>
                     </span>
                     <span className={styles.message}>
                         {experience.description}

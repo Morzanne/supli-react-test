@@ -19,22 +19,22 @@ const NavigationBlock = () => {
                     <Col xs={12} sm={6} md={4}>
                         <ul className={styles.listWrapper}>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Careers
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Advertising
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Small Business
                                 </a>
                             </li>
@@ -43,22 +43,22 @@ const NavigationBlock = () => {
                     <Col xs={12} sm={6} md={4}>
                         <ul className={styles.listWrapper}>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Talent Solutions
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Marketing Solutions
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Sales Solutions
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Safery Center
                                 </a>
                             </li>
@@ -67,17 +67,17 @@ const NavigationBlock = () => {
                     <Col xs={12} sm={6} md={4}>
                         <ul className={styles.listWrapper}>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Community Guidelines
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Privacy and Terms
                                 </a>
                             </li>
                             <li>
-                                <a href='#'>
+                                <a href="#!">
                                     Mobile App
                                 </a>
                             </li>

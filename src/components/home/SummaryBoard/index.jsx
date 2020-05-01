@@ -8,15 +8,16 @@ import { faLocationArrow, faHashtag } from '@fortawesome/free-solid-svg-icons';
 import styles from './styles.module.scss';
 import Img from '../../common/Img';
 import { User } from '../../../data/models/User/user';
+import { AuthenticatedSupliUser } from '../../../data/models/SuppliUser/suppliUser';
 
-const SummaryDashboard = ({ user }) => {
+const SummaryDashboard = ({ user, supliUser }) => {
     return <Row noGutters className={styles.row}>
         <Img className={styles.profilePic} src={"https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg"} alt="profile picture" />
-        <Col xl={{ size: 9, offset: 3 }} lg={{size: 10, offset: 0}} className={styles.wrapper}>
+        <Col xl={{ size: 9, offset: 3 }} lg={{ size: 10, offset: 0 }} className={styles.wrapper}>
             <Row>
                 <Col>
                     <span className={styles.identity}>
-                        {user.firstName} {user.lastName}
+                        {supliUser.user.firstname} {supliUser.user.lastname}
                     </span>
                     <span>
                         <FontAwesomeIcon icon={faHashtag} color="orange" />
@@ -49,7 +50,8 @@ const SummaryDashboard = ({ user }) => {
 }
 
 SummaryDashboard.propTypes = {
-    user: PT.instanceOf(User)
+    user: PT.instanceOf(User),
+    supliUser: PT.instanceOf(AuthenticatedSupliUser)
 }
 
 

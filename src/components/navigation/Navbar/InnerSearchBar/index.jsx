@@ -17,7 +17,7 @@ const InnerSearchBar = () => (
             <SearchFormContainer />
         </Col>
         <Col xs={2}>
-            <a href="#">
+            <a href="#!">
                 <FontAwesomeIcon icon={faCog} />
             </a>
         </Col>

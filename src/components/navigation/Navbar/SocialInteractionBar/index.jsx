@@ -11,12 +11,12 @@ const SocialInteractionBar = ({ messagesCount }) => (
     <>
         <ul className={styles.iconList}>
             <li>
-                <a href="#">
+                <a href="#!">
                     <Img src={linkedin} alt="linkedin logo" className={styles.linkedin} />
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#!">
                     <div>
                         <FontAwesomeIcon icon={faRss} />
                     </div>
@@ -24,7 +24,7 @@ const SocialInteractionBar = ({ messagesCount }) => (
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#!">
                     <div>
                         <FontAwesomeIcon icon={faUserFriends} />
                     </div>
@@ -32,7 +32,7 @@ const SocialInteractionBar = ({ messagesCount }) => (
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#!">
                     <div>
                         <FontAwesomeIcon icon={faSuitcase} />
                     </div>
@@ -40,7 +40,7 @@ const SocialInteractionBar = ({ messagesCount }) => (
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#!">
                     <div className={styles.messageIcon}>
                         <FontAwesomeIcon icon={faCommentAlt} />
                         <span className={styles.messageCount}>{messagesCount}</span>
@@ -50,7 +50,7 @@ const SocialInteractionBar = ({ messagesCount }) => (
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#!">
                     <div>
                         <FontAwesomeIcon icon={faBell} />
                     </div>

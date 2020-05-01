@@ -1,14 +1,18 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { reducer as formReducer } from 'redux-form'
+import { routerMiddleware } from 'connected-react-router'
+import { createBrowserHistory } from 'history'
 
-import reducers from './reducers'
 import middleware from './middleware'
+import storedReducers from './reducers'
 
-export default createStore(
-  combineReducers({
-    ...reducers,
-    form: formReducer
-  }),
-  composeWithDevTools(applyMiddleware(...middleware))
-)
+export const history = createBrowserHistory()
+
+export default function configureStore() {
+  const store = createStore(
+    storedReducers(history),
+    composeWithDevTools(applyMiddleware(routerMiddleware(history), ...middleware))
+  );
+
+  return store;
+}

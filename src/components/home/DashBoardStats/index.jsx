@@ -14,7 +14,7 @@ export const DashBoardState = ({ user }) => {
 
                 <div className={styles.row}>
                     <div className={styles.title}>YOUR DASHBOARD</div>
-                    <a href="#" className={styles.link}>
+                    <a href="#!" className={styles.link}>
                         GO TO STATS
                     </a>
                 </div>

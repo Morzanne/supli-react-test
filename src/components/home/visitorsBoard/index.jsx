@@ -16,7 +16,7 @@ export const VisitorBoard = ({ user }) => {
             <CardHeader className={styles.cardHeader}>
                 <div className={styles.row}>
                     <div className={styles.title}>VISITORS</div>
-                    <a href="#" className={styles.link}>
+                    <a href="#!" className={styles.link}>
                         VIEW ALL
                 </a>
                 </div>

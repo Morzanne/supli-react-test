@@ -10,15 +10,15 @@ export const Project = ({ projectUnit }) => {
         <div>
             <div className={styles.cardBody}>
                 <div className={styles.imgWrapper}>
-                    <a href="#">
-                        <img src={project} className={cx(styles.img)} alt="project image" />
+                    <a href="#!">
+                        <img src={project} className={cx(styles.img)} alt="project pic" />
                     </a>
                 </div>
             </div>
             <div>
                 <div className={styles.commandBlock}>
                     <span className={styles.projectTitle}>{projectUnit.title}</span>
-                    <div className="d-inline-block">
+                    <div>
                         <span className={styles.description}>{projectUnit.description}{', '}
                         </span>
                         <span className={styles.date}>
