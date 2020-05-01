@@ -35,3 +35,9 @@
 .commandBlock{
   margin: 10px 0 10px 0;
 }
+
+@media (max-width: 768px){
+  .commandBlock{
+    text-align: center;
+  }
+}

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '../../../selectors/user/user';
 import { fetchUserActionRequest } from '../../../actions/user/user';
 import { mainUser } from '../../../data/mockDatas/user';
+import { getAuthenticatedSupliUser } from '../../../selectors/authenticatedSupliUser/authenticatedSupliUser';
 
 export const UserProvider = ({ children }) => {
 
@@ -23,6 +24,10 @@ export const UserProvider = ({ children }) => {
         return getUser(state)
     })
 
+    const supliUser = useSelector(state => {
+        return getAuthenticatedSupliUser(state)
+    })
+
     useEffect(() => {
         fetchUser()
     }, [fetchUser])
@@ -31,7 +36,7 @@ export const UserProvider = ({ children }) => {
         return null
     }
 
-    return children({ user: user })
+    return children({ user: user, supliUser: supliUser })
 }
 
 UserProvider.propTypes = {

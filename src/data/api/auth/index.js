@@ -4,9 +4,6 @@ import { executeRequestWithAuth } from '../api/requestBuilder';
 import api from '../api/index';
 
 const authenticatedSupliUserApi = {
-  get: function* (...params) {
-    return yield call(executeRequestWithAuth, api.get, ...params);
-  },
   post: function* (...params) {
     return yield call(executeRequestWithAuth, api.post, ...params);
   },

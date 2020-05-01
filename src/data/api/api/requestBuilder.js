@@ -8,22 +8,20 @@ export function* executeRequest({
     method,
     route,
     requestConfig = { params: {}, headers: {} },
-    responseConfig = {},
 }) {
     const { request } = yield call(buildRequest, baseUrl, method, route, requestConfig);
     const result = yield call(fetch, "https://supli-staging.mysupli.com/api/auth-tokens", request);
-    const response = yield call(buildResponse, result, responseConfig);
+    const response = yield call(buildResponse, result);
     return response;
 }
 
 export function* executeRequestWithAuth(
     executeRequest,
     route,
-    requestConfig = {},
-    responseConfig = {}
+    requestConfig = {}
 ) {
     try {
-        const response = yield call(executeRequest, route, requestConfig, responseConfig);
+        const response = yield call(executeRequest, route, requestConfig);
         return response;
     } catch (error) {
         throw error;

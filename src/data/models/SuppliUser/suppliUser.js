@@ -28,19 +28,3 @@ AuthenticatedSupliUser.prototype.isAuthenticated = function() {
     return this.value !== null;
   };
 
-export const toAuthenticatedSupliUser = authenticatedSupliUser => {
-    return new AuthenticatedSupliUser(
-        fromJS({
-            ...authenticatedSupliUser
-        })
-    )
-}
-
-//UTIL
-export function parseFromApiDate(date) {
-    if (date) {
-        return parse(date);
-    }
-
-    return null;
-}

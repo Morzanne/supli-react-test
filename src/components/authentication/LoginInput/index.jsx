@@ -2,8 +2,6 @@ import React from 'react';
 import { Col, FormGroup, Input } from 'reactstrap';
 import cx from 'classnames';
 
-import { Label } from '../Label/index';
-
 import styles from './styles.module.scss';
 
 const LoginInput = ({ type, placeholder, name, input, meta, autoComplete, ...props }) => {

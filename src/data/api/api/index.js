@@ -4,13 +4,12 @@ import { methods, urls } from './constants';
 import { executeRequest } from './requestBuilder';
 
 const api = {
-  post: function*(route, requestConfig, responseConfig) {
+  post: function*(route, requestConfig) {
     return yield call(executeRequest, {
       method: methods.POST,
       url: urls.API,
       route,
-      requestConfig,
-      responseConfig,
+      requestConfig
     });
   },
 };

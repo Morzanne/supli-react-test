@@ -6,7 +6,7 @@ import { loginSupliUserActionSuccess, loginSupliUserActionFailure, loginSupliUse
 
 export function* sendLoginData({ login, password }) {
   const authenticatedSuppliUser = yield call(api.login, login, password);
-  yield put(loginSupliUserActionSuccess({ payload: authenticatedSuppliUser }));
+  yield put(loginSupliUserActionSuccess({ payload: authenticatedSuppliUser, isFetchingDatas: false }));
 }
 
 function buildFormErrors(error) {

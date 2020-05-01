@@ -13,7 +13,7 @@ export const Footer = () => {
     return (
         <Container fluid>
             <Container>
-                <Row>
+                <Row className={styles.row}>
                     <Col xs={12} md={1} className={styles.linkeDinWrapper}>
                         <Img src={linkedin} alt="linkedin logo" className={styles.linkedin} />
                     </Col>

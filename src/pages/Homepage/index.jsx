@@ -3,7 +3,6 @@ import { Row, Container, Col } from 'reactstrap';
 
 import styles from './styles.module.scss';
 import Banner from '../../components/home/Banner';
-import { SummaryDashBoardContainer } from '../../components/home/SummaryBoard/SummaryDashboardContainer';
 import UserProvider from '../../components/Providers/UserProvider';
 import DashBoardState from '../../components/home/DashBoardStats';
 import VisitorBoard from '../../components/home/visitorsBoard';
@@ -14,12 +13,13 @@ import SkillDashBoard from '../../components/home/skills/SkillDashboard/index'
 import EducationList from '../../components/home/educationList/EducationList';
 import ExperienceList from '../../components/home/experienceList';
 import { NavbarContainer } from '../../components/navigation/Navbar/NavbarContainer';
+import SummaryDashboard from '../../components/home/SummaryBoard';
 
 const HomePage = () => (
     <Fragment>
         <NavbarContainer />
         <UserProvider>
-            {({ user }) => (
+            {({ user, supliUser }) => (
                 <Container className={styles.wrapper} fluid>
                     <Row>
                         <Container fluid={"md"} className={styles.innerWrapper}>
@@ -30,7 +30,7 @@ const HomePage = () => (
                                             <Col xs={12}>
                                                 <Banner />
                                                 <div>
-                                                    <SummaryDashBoardContainer user={user} />
+                                                    <SummaryDashboard user={user} supliUser={supliUser} />
                                                 </div>
                                             </Col>
                                         </Col>

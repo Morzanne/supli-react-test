@@ -1,8 +1,8 @@
 import { createReducer } from "redux-act";
-import { Map } from 'immutable';
 
 import { loginSupliUserActionSuccess, loginSupliUserActionFailure, loginSupliUserActionRequest } from '../../actions/authenticatedSupliUser/authenticatedSupliUser'
 import { InitialState } from '../../data/models/initialState';
+import { AuthenticatedSupliUser } from "../../data/models/SuppliUser/suppliUser";
 
 export const REDUCER_KEY = "supliUser/login"
 
@@ -13,7 +13,7 @@ const reducer = createReducer(
         },
     },
     new InitialState({
-        data: Map()
+        data: new AuthenticatedSupliUser()
     })
 )
 

@@ -2,7 +2,8 @@ import { call } from 'redux-saga/effects';
 import routes from '../auth/routes';
 
 import api from '../auth/index';
-import { toAuthenticatedSupliUser, AuthenticatedSupliUser } from '../../models/SuppliUser/suppliUser';
+import { AuthenticatedSupliUser, SupliUser } from '../../models/SuppliUser/suppliUser';
+import { fromJS } from 'immutable';
 
 function* login(login, password) {
   const responseBody = yield call(api.post, routes.POST_AUTH_LOGIN, {
@@ -11,8 +12,13 @@ function* login(login, password) {
       password: password,
     },
   });
-
-  return toAuthenticatedSupliUser(responseBody);
+  console.log('called')
+  return new AuthenticatedSupliUser({
+    ...responseBody,
+    user: new SupliUser({
+      ...responseBody.user
+    })
+  });
 }
 export default {
   login
