@@ -1,5 +1,4 @@
 import { createReducer } from "redux-act";
-import { Map } from 'immutable';
 
 import { fetchUserActionSuccess, fetchUserActionRequest } from '../../actions/user/user';
 import { InitialState } from '../../data/models/initialState';

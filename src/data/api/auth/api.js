@@ -3,7 +3,6 @@ import routes from '../auth/routes';
 
 import api from '../auth/index';
 import { AuthenticatedSupliUser, SupliUser } from '../../models/SuppliUser/suppliUser';
-import { fromJS } from 'immutable';
 
 function* login(login, password) {
   const responseBody = yield call(api.post, routes.POST_AUTH_LOGIN, {

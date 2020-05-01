@@ -1,6 +1,6 @@
 import { createReducer } from "redux-act";
 
-import { loginSupliUserActionSuccess, loginSupliUserActionFailure, loginSupliUserActionRequest } from '../../actions/authenticatedSupliUser/authenticatedSupliUser'
+import { loginSupliUserActionSuccess } from '../../actions/authenticatedSupliUser/authenticatedSupliUser'
 import { InitialState } from '../../data/models/initialState';
 import { AuthenticatedSupliUser } from "../../data/models/SuppliUser/suppliUser";
 

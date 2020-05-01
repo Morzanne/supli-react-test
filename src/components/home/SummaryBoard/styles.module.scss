@@ -78,8 +78,12 @@
     }
     .wrapper{
         position: relative;
-        top: 55px;
+        top: 20px;
         right: -10px;
+    }
+    .profilePic{
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -87,9 +91,7 @@
     .profilePic{
         display: none;
     }
-}
 
-@media (max-width:768px){
     .buttonWrapper{
         justify-content: center;
     }

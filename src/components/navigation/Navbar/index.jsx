@@ -20,7 +20,7 @@ const NavigationBar = ({ messagesCount }) => (
         <Container fluid>
             <Col xs={2} md={1} xl={2} className={styles.linkeDinLogoWrapper}>
                 <div>
-                    <a href="#">
+                    <a href="#!">
                         <Img src={linkedin} alt="linkedin logo" className={styles.linkedin} />
                     </a>
                 </div>

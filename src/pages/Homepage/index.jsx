@@ -14,6 +14,7 @@ import EducationList from '../../components/home/educationList/EducationList';
 import ExperienceList from '../../components/home/experienceList';
 import { NavbarContainer } from '../../components/navigation/Navbar/NavbarContainer';
 import SummaryDashboard from '../../components/home/SummaryBoard';
+import DashboardSelection from '../../components/navigation/DashboardSelection';
 
 const HomePage = () => (
     <Fragment>
@@ -25,8 +26,8 @@ const HomePage = () => (
                         <Container fluid={"md"} className={styles.innerWrapper}>
                             <Container fluid={"md"}>
                                 <Row>
-                                    <Row>
-                                        <Col xs={12} md={8} className="mt-md-4 mb-4">
+                                    <Row noGutters>
+                                        <Col xs={12} md={8} className="mt-md-4">
                                             <Col xs={12}>
                                                 <Banner />
                                                 <div>
@@ -34,16 +35,19 @@ const HomePage = () => (
                                                 </div>
                                             </Col>
                                         </Col>
-                                        <Col xs={12} md={4} className="h-auto mt-md-4 mb-4">
+                                        <Col xs={12} md={4} className="h-auto mt-4">
                                             <Col xs={12} className="h-100">
                                                 <DashBoardState user={user} />
                                             </Col>
 
                                         </Col>
                                     </Row>
-                                    <Row>
-                                        <Col xs={12} md={8} className="mt-md-4 mb-4">
-                                            <Col xs={12}>
+                                    <Row noGutters>
+                                        <Col xs={12} md={8} className="mt-md-4">
+                                            <Col xs={12} className="d-none d-xl-block">
+                                                <DashboardSelection />
+                                            </Col>
+                                            <Col xs={12} className="mb-4">
                                                 <About user={user} />
                                             </Col>
                                             <Col xs={12} className="mt-md-4 mb-4">

@@ -1,5 +1,4 @@
-import parse from 'date-fns/parse';
-import { Record, List, fromJS, Map } from 'immutable';
+import { Record, List } from 'immutable';
 
 export const SupliUser = Record(
     {

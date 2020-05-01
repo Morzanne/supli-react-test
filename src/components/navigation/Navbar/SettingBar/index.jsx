@@ -11,7 +11,7 @@ const SettingBar = () => (
                 <FontAwesomeIcon icon={faEllipsisH} />
             </div>
             <span className={styles.iconTitle}>
-                <a href="#">
+                <a href="#!">
                     OTHER
                 </a>
             </span>

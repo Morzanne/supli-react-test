@@ -10,7 +10,7 @@ export const Project = ({ projectUnit }) => {
         <div>
             <div className={styles.cardBody}>
                 <div className={styles.imgWrapper}>
-                    <a href="#">
+                    <a href="#!">
                         <img src={project} className={cx(styles.img)} alt="project pic" />
                     </a>
                 </div>

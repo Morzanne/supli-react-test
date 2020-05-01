@@ -1,6 +1,6 @@
 const routes = {
     home: {
-        path: '/homepage',
+        path: '/',
         label: 'app.routes.home.label',
     },
     login: {
