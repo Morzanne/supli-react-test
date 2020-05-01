@@ -1,0 +1,31 @@
+.dashboardNavTab {
+    background: white;
+    height: 50px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .dashboardNavTab.active {
+    background: #006097;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .link {
+    display: block;
+    text-align: center;
+    padding: 17px 0 16px 0;
+  }
+  
+  .dashboardNavTab .link {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .dashboardNavTab.active .link {
+    color: white!important;
+  }
+  
