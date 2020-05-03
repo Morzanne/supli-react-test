@@ -5,12 +5,17 @@
 
 .stat{
   display: block;
+  margin-top: -10px;
 }
 
 .statWrapper::first-line{
   font-size: 45px;
   font-weight: 600;
   color: #006097;
+}
+
+.statWrapper:not(:last-child){
+  margin-bottom: 10px;
 }
 
 .cardBody{

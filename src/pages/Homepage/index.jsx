@@ -43,7 +43,7 @@ const HomePage = () => (
                                         </Col>
                                     </Row>
                                     <Row noGutters>
-                                        <Col xs={12} md={8} className="mt-md-4">
+                                        <Col xs={12} md={8} className="mt-4">
                                             <Col xs={12} className="d-none d-xl-block">
                                                 <DashboardSelection />
                                             </Col>

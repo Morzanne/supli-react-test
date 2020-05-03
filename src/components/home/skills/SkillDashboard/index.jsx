@@ -18,7 +18,7 @@ const SkillDashboard = ({ user }) => {
                 </Row>
             </CardHeader>
             <CardBody className={styles.cardBody}>
-                <Row>
+                <Row className={styles.wrapper}>
                     {user.skills && user.skills.map((skill, index) => (
                         <Col key={index} xs={6} xl={4}>
                             <SkillCard skill={skill} />

@@ -22,9 +22,9 @@ export const VisitorBoard = ({ user }) => {
                 </div>
             </CardHeader>
             <CardBody className={styles.cardBody}>
-                <Row>
+                <Row className={styles.wrapper}>
                     {user.visitors && user.visitors.map((visitor, index) => (
-                        <Col key={index} className={styles.visitorWrapper}>
+                        <Col xs={6} md={12} key={index} className={styles.visitorWrapper}>
                             <Visitor visitor={visitor} />
                         </Col>
                     ))}

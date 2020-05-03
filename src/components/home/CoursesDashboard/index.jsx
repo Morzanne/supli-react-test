@@ -18,7 +18,7 @@ export const CoursesDashboard = ({ courses }) => {
             <CardBody className={styles.cardBody}>
                 <Row>
                     {courses && courses.map((course, index) => (
-                        <Col key={index} xs={12} md={12} className={styles.courseWrapper}>
+                        <Col key={index} xs={12} className={styles.courseWrapper}>
                             <div className={styles.commandBlock}>
                                 <VideoPlayer url={course.video} config={{ youtube: { playerVars: { controls: 0 } } }}
                                     height="80px" width="100px" className={styles.video} />
